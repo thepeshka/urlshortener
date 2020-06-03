@@ -10,8 +10,8 @@ services:
     volumes:
       - db:/app/db
       - ./static:/app/static
-    environment:
-      - $ALLOWED_HOSTS
+    env_file:
+      - .env
 
 volumes:
   db:
