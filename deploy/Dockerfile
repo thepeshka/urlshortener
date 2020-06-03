@@ -8,4 +8,6 @@ RUN pip install -r /app/requirements.txt
 
 COPY ./src /app
 
-CMD uwsgi --wsgi-file /app/urlshortener/wsgi.py --http 0.0.0.0:8000
+COPY ./deploy/run.sh /run.sh
+
+ENTRYPOINT /run.sh

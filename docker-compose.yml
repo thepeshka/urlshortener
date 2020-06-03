@@ -8,4 +8,8 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./src:/app
+      - db:/app/db
+      - ./static:/app/static
+
+volumes:
+  db:
