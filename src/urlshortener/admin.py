@@ -8,6 +8,6 @@ class URLAdminModel(ModelAdmin):
     list_display = ('__str__', 'link',)
 
     def link(self, obj):
-        return '<a href="/%s">/%s</a>' % (obj.slug, obj.url_field)
+        return '<a href="/%s">/%s</a>' % (obj.slug, obj.slug)
     link.allow_tags = True
     link.short_description = 'Link'
