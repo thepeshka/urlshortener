@@ -10,6 +10,7 @@ services:
     volumes:
       - db:/app/db
       - ./static:/app/static
+      - ./sock:/app/sock
     env_file:
       - .env
 
